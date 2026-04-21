@@ -196,6 +196,7 @@ export type CategoryData = Record<string, CellData>
 export interface FinancialState {
   revenue: Record<string, CategoryData>
   expenses: Record<string, CategoryData>
+  comments: Record<string, string>
 }
 
 export function buildDefaultState(): FinancialState {
@@ -213,7 +214,7 @@ export function buildDefaultState(): FinancialState {
       expenses[e.id][m.month] = { projected: m.projected, actual: m.actual }
     }
   }
-  return { revenue, expenses }
+  return { revenue, expenses, comments: {} }
 }
 
 // ── Derived helpers ──
