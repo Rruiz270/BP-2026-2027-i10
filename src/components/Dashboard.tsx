@@ -154,7 +154,7 @@ export default function Dashboard() {
             <h2 className="text-base font-bold text-foreground">
               {tab === 'overview' ? 'Visão Geral' : tab === 'input' ? 'Reforecast & Actuals' : tab === 'export' ? 'Relatórios & Export' : tab === 'expenses' ? 'Despesas' : activeProduct?.name}
             </h2>
-            <p className="text-[11px] text-muted-fg">Contratos fechados até Dez/2027 · Receita projetada até 2029</p>
+            <p className="text-[11px] text-muted-fg">Fechamento de contratos Jun/2026 – Jun/2027 · Receita projetada até 2029</p>
           </div>
           <div className="flex items-center gap-1 bg-muted rounded-lg p-0.5">
             {(['all', '2026', '2027', '2028', '2029'] as Year[]).map((y) => (

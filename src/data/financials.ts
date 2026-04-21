@@ -65,17 +65,19 @@ const educationRevenue = build(
 )
 
 // ── 2. CONSULTORIA FUNDEB ──
+// Starts Jun/2026. Active closings Jun/2026 – Jun/2027. Tail revenue after.
 const fundebRevenue = build(
-  [900_000, 1_200_000, 1_500_000, 1_800_000, 2_400_000, 3_000_000, 3_600_000, 4_800_000, 6_000_000, 7_800_000, 10_200_000, 16_800_000],
-  [3_600_000, 4_200_000, 4_500_000, 4_800_000, 4_800_000, 5_100_000, 5_100_000, 5_400_000, 5_400_000, 5_700_000, 5_700_000, 5_700_000],
-  [4_000_000, 4_000_000, 4_200_000, 4_200_000, 4_000_000, 4_000_000, 3_800_000, 3_800_000, 4_200_000, 4_200_000, 4_200_000, 4_000_000],
-  [3_200_000, 3_200_000, 3_000_000, 3_000_000, 3_000_000, 3_000_000, 2_800_000, 2_800_000, 3_000_000, 3_000_000, 3_000_000, 3_000_000],
+  [0, 0, 0, 0, 0, 1_800_000, 3_000_000, 4_200_000, 5_400_000, 7_200_000, 9_000_000, 11_400_000],
+  [6_000_000, 6_600_000, 7_200_000, 7_800_000, 7_800_000, 7_800_000, 4_200_000, 4_200_000, 4_200_000, 3_600_000, 3_600_000, 3_600_000],
+  [3_000_000, 3_000_000, 3_200_000, 3_200_000, 3_000_000, 3_000_000, 2_800_000, 2_800_000, 3_000_000, 3_000_000, 3_000_000, 3_000_000],
+  [2_500_000, 2_500_000, 2_500_000, 2_500_000, 2_500_000, 2_500_000, 2_000_000, 2_000_000, 2_500_000, 2_500_000, 2_500_000, 2_500_000],
 )
 
 // ── 3. BNCC FORMAÇÃO ──
+// Starts Jun/2026. Active closings Jun/2026 – Jun/2027. Ongoing enrollment after.
 const bnccRevenue = build(
-  [100_000, 200_000, 400_000, 600_000, 1_000_000, 1_200_000, 1_600_000, 2_000_000, 2_400_000, 3_000_000, 3_600_000, 3_900_000],
-  [2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000],
+  [0, 0, 0, 0, 0, 800_000, 1_400_000, 2_000_000, 2_600_000, 3_400_000, 4_200_000, 5_600_000],
+  [2_000_000, 2_000_000, 2_200_000, 2_200_000, 2_400_000, 2_400_000, 1_800_000, 1_800_000, 1_800_000, 1_800_000, 1_800_000, 1_800_000],
   [2_500_000, 2_500_000, 3_000_000, 3_000_000, 3_000_000, 3_000_000, 3_000_000, 3_000_000, 3_000_000, 3_500_000, 3_500_000, 3_500_000],
   [2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000, 2_000_000],
 )
@@ -118,13 +120,13 @@ export const PRODUCTS: ProductLine[] = [
     color: '#00C48A',
     revenue: fundebRevenue,
     subProjects: [
-      { name: 'São Paulo — 350 municípios', state: 'SP', status: 'active', contractValue: 21_000_000, startDate: '2026-01', endDate: '2026-12', studentsTarget: 0, teachersTarget: 0, citiesCount: 350 },
-      { name: 'Santa Catarina — 150 municípios', state: 'SC', status: 'active', contractValue: 9_000_000, startDate: '2026-01', endDate: '2026-12', studentsTarget: 0, teachersTarget: 0, citiesCount: 150 },
-      { name: 'Brasil — Expansão Nacional 2026', state: 'BR', status: 'negotiation', contractValue: 30_000_000, startDate: '2026-04', endDate: '2027-03', studentsTarget: 0, teachersTarget: 0, citiesCount: 500 },
-      { name: 'Brasil — Expansão Nacional 2027', state: 'BR', status: 'prospecting', contractValue: 60_000_000, startDate: '2027-01', endDate: '2027-12', studentsTarget: 0, teachersTarget: 0, citiesCount: 1_000 },
+      { name: 'São Paulo — 350 municípios', state: 'SP', status: 'active', contractValue: 21_000_000, startDate: '2026-06', endDate: '2027-06', studentsTarget: 0, teachersTarget: 0, citiesCount: 350 },
+      { name: 'Santa Catarina — 150 municípios', state: 'SC', status: 'active', contractValue: 9_000_000, startDate: '2026-06', endDate: '2027-06', studentsTarget: 0, teachersTarget: 0, citiesCount: 150 },
+      { name: 'Brasil — Expansão Nacional 2026', state: 'BR', status: 'negotiation', contractValue: 12_000_000, startDate: '2026-06', endDate: '2027-06', studentsTarget: 0, teachersTarget: 0, citiesCount: 200 },
+      { name: 'Brasil — Expansão Nacional 2027', state: 'BR', status: 'prospecting', contractValue: 66_600_000, startDate: '2027-01', endDate: '2027-06', studentsTarget: 0, teachersTarget: 0, citiesCount: 1_110 },
     ],
     kpis: [
-      { label: 'Municípios Atendidos', target2026: 1_000, target2027: 2_000, target2028: 2_800, target2029: 3_400, unit: 'cidades' },
+      { label: 'Municípios Atendidos', target2026: 700, target2027: 1_810, target2028: 2_400, target2029: 2_900, unit: 'cidades' },
       { label: 'Receita Média por Cidade', target2026: 60_000, target2027: 60_000, target2028: 60_000, target2029: 60_000, unit: 'R$' },
       { label: 'FUNDEB Recuperado p/ Cidades', target2026: 500_000_000, target2027: 1_200_000_000, target2028: 1_800_000_000, target2029: 2_200_000_000, unit: 'R$' },
     ],
@@ -137,8 +139,8 @@ export const PRODUCTS: ProductLine[] = [
     color: '#00B4D8',
     revenue: bnccRevenue,
     subProjects: [
-      { name: 'Plataforma EAD — Fase 1', state: 'BR', status: 'active', contractValue: 20_000_000, startDate: '2026-01', endDate: '2026-12', studentsTarget: 0, teachersTarget: 100_000, citiesCount: 0 },
-      { name: 'Plataforma EAD — Expansão 2027', state: 'BR', status: 'prospecting', contractValue: 24_000_000, startDate: '2027-01', endDate: '2027-12', studentsTarget: 0, teachersTarget: 120_000, citiesCount: 0 },
+      { name: 'Plataforma EAD — Fase 1', state: 'BR', status: 'active', contractValue: 20_000_000, startDate: '2026-06', endDate: '2027-06', studentsTarget: 0, teachersTarget: 100_000, citiesCount: 0 },
+      { name: 'Plataforma EAD — Expansão 2027', state: 'BR', status: 'prospecting', contractValue: 24_000_000, startDate: '2027-01', endDate: '2027-06', studentsTarget: 0, teachersTarget: 120_000, citiesCount: 0 },
     ],
     kpis: [
       { label: 'Professores Certificados', target2026: 100_000, target2027: 220_000, target2028: 400_000, target2029: 520_000, unit: 'professores' },
