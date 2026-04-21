@@ -84,7 +84,7 @@ export default function ProductDetail({ product, data, yearFilter }: Props) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
                 <XAxis dataKey="month" tick={{ fontSize: 9 }} interval={yearFilter ? 0 : 3} angle={-45} textAnchor="end" height={45} />
                 <YAxis tickFormatter={(v: number) => formatCompact(v)} tick={{ fontSize: 9 }} width={60} />
-                <Tooltip formatter={(v: number) => formatCompact(v)} />
+                <Tooltip formatter={(v) => formatCompact(Number(v))} />
                 <Area type="monotone" dataKey="projected" stroke={product.color} fill={product.color} fillOpacity={0.12} strokeWidth={2} name="Projetado" />
                 <Area type="monotone" dataKey="actual" stroke="#00E5A0" fill="#00E5A0" fillOpacity={0.1} strokeWidth={2} strokeDasharray="4 2" name="Realizado" />
               </AreaChart>
@@ -99,7 +99,7 @@ export default function ProductDetail({ product, data, yearFilter }: Props) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
                 <XAxis dataKey="month" tick={{ fontSize: 9 }} interval={yearFilter ? 0 : 3} angle={-45} textAnchor="end" height={45} />
                 <YAxis tickFormatter={(v: number) => formatCompact(v)} tick={{ fontSize: 9 }} width={60} />
-                <Tooltip formatter={(v: number) => formatCompact(v)} />
+                <Tooltip formatter={(v) => formatCompact(Number(v))} />
                 <Area type="monotone" dataKey="cumulative" stroke={product.color} fill={product.color} fillOpacity={0.08} strokeWidth={2} name="Acumulado" />
               </AreaChart>
             </ResponsiveContainer>

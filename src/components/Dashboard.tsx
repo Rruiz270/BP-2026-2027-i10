@@ -87,7 +87,11 @@ export default function Dashboard() {
       const next = structuredClone(prev)
       if (!next[type][categoryId]) return prev
       if (!next[type][categoryId][month]) next[type][categoryId][month] = { projected: 0, actual: null }
-      next[type][categoryId][month][field] = value
+      if (field === 'actual') {
+        next[type][categoryId][month].actual = value
+      } else {
+        next[type][categoryId][month].projected = value ?? 0
+      }
       return next
     })
   }, [])
