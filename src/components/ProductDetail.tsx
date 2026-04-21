@@ -26,9 +26,12 @@ export default function ProductDetail({ product, data, yearFilter }: Props) {
   const catData = data.revenue[product.id] ?? {}
   const years = yearFilter ? [yearFilter] : YEARS.map(Number)
 
-  const months = yearFilter
+  const allMonths = yearFilter
     ? ALL_MONTHS.filter((m) => m.startsWith(String(yearFilter)))
     : ALL_MONTHS
+
+  const firstNonZero = allMonths.findIndex((m) => (catData[m]?.projected ?? 0) > 0 || (catData[m]?.actual ?? 0) > 0)
+  const months = firstNonZero > 0 ? allMonths.slice(firstNonZero) : allMonths
 
   const chartData = months.map((m) => ({
     month: formatMonth(m),

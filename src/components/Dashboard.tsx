@@ -12,7 +12,7 @@ import ExportPanel from './ExportPanel'
 type Tab = 'overview' | 'education' | 'fundeb' | 'bncc' | 'municipal' | 'input' | 'export' | 'expenses'
 type Year = 'all' | '2026' | '2027' | '2028' | '2029'
 
-const STORAGE_KEY = 'i10-bp-data'
+const STORAGE_KEY = 'i10-bp-data-v3'
 
 const NAV_SECTIONS = [
   {
